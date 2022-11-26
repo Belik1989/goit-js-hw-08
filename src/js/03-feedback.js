@@ -34,6 +34,8 @@ evt.preventDefault();
 // очищаємо форму
 evt.target.reset();
 
+console.log('Form submit inform:', JSON.parse(localStorage.getItem(STORAGE_KEY)));
+
 // прибераємо данні зі сховища
 localStorage.removeItem(STORAGE_KEY);
 }

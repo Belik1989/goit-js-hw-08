@@ -2,8 +2,7 @@
 import Player from '@vimeo/player';
 let throttle = require('lodash.throttle');
 
-// Ініціалізація плеєра з урахуванням документації та того, що плеєр встановлений 
-//через  npm пакети
+// // оголошуємо змінні
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
 
@@ -25,5 +24,10 @@ player.getCurrentTime().then(function (seconds) {
 });
 }
 
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+player.setCurrentTime(localStorage.getItem('videoplayer-current-time') || 0);
+
+console.log(
+'localStorage.getItem(videoplayer-current-time)',
+localStorage.getItem('videoplayer-current-time')
+);
 

@@ -13,7 +13,7 @@ console.log('played the video!');
 // 1.Відслідковуєио зміну часу через timeupdate
 // 2.зберігаємо час в localStorage  з ключем "videoplayer-current-time"
 // 3. Використовуємо setCurrentTime() для відтворення відео з того ж місця при 
-// перезагрузці сторінки
+// перезагрузці сторінки або з початку якщо відео не було відтворене  раніше
 // 4. За допомогои бібліотеки lodash.throttle використовуємо прийом __throttle
 // щоб наш час зберігався кожну секунду в localStorage
 player.on('timeupdate', throttle(timeSave, 1000));
